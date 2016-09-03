@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-	println(start);
+	
 	if (start){
 		var heightCamera = width*240/320;
 		var widthCamera = width;
@@ -41,7 +41,8 @@ function draw() {
 		textSize(25);
 		text("Ubique su cara en el centro", width/2, height/2-60);
 		text("Con cada color imaginese pintandose todo su cuerpo mientras mira la imagen.", width/2,  height/2-30);
-		image(capture, width/2-160, height/2, 320, 240);
+		imageMode(CENTER);
+		image(capture, width/2, height/2+120, 320, 240);
 		if (limpio){
 			text("Limpieza Finalizada !", width/2, 90);			
 		}

@@ -39,8 +39,9 @@ function draw() {
 		text("< Presione una tecla para la limpieza>", width/2, 150);
 
 		textSize(25);
-		text("Con cada color imaginese pintandose todo su cuerpo mientras mira la imagen.", width/2, 30);
-
+		text("Ubique su cara en el centro", width/2, height/2-60);
+		text("Con cada color imaginese pintandose todo su cuerpo mientras mira la imagen.", width/2,  height/2-30);
+		image(capture, width/2-160, height/2, 320, 240);
 		if (limpio){
 			text("Limpieza Finalizada !", width/2, 90);			
 		}

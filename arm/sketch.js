@@ -34,8 +34,11 @@ function draw() {
 	} else {
 		background(255);
 		fill(0);
-		textSize(32);
+		
 		textAlign(CENTER);
+		textSize(50);
+		text("ARMONIZADOR", width/2, 50);
+		textSize(32);
 		text("< Presione una tecla para la limpieza>", width/2, 150);
 
 		textSize(25);

@@ -40,6 +40,13 @@ function draw() {
 		background(colorBackground);
 
  		Comienzo();
+ 		var total = round((millis() - startTime) / 1000) ;
+ 		text(total + " Seg.", 70, 50);
+
+ 		if (total >= 60){
+ 			start = false;
+ 			limpio = true;
+ 		}
 	} else {
 		background(255);
 		fill(0);

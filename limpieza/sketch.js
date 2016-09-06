@@ -80,7 +80,7 @@ function Comienzo(){
 	px2 = width/8 + cos(radians(angle2))*(radius);
   	py2 = 75 + sin(radians(angle2))*(radius);
 
-  	angle -= frequency;
+  	angle += frequency;
   	imageMode(CENTER);
 	image(espada,px+ widthCamera/2,py + heightCamera/2);
 	image(doble,px2+ widthCamera/2,py2 + heightCamera/2);

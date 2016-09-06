@@ -3,7 +3,7 @@ var start, startTime, limpio;
 var colorBackground;
 var px,py,radius = 300.0;
 var px2,py2;
-var frequency, angle = 0.0;
+var frequency,frequency2, angle = 0.0, angle2 = 0.0;
 
 var widthCamera, heightCamera;
 
@@ -14,7 +14,9 @@ function setup() {
 	capture.hide();
 	start = false;
 	limpio = false;
-	frequency = 0.7;
+
+	frequency = 1.0;
+	frequency2 = 0.7;
 
 	espada = loadImage("data/espada2.png"); 
 	doble = loadImage("data/doblefelicidad.png"); 
@@ -73,18 +75,18 @@ function Comienzo(){
 	image(capture, width/2, height/2, widthCamera, heightCamera);
 
 
-	px = width/8 + cos(radians(angle))*(radius);
+	px = (width-widthCamera)/2 + cos(radians(angle))*(radius);
   	py = 75 + sin(radians(angle))*(radius);
 
-  	var angle2 = angle + 180
-	px2 = width/8 + cos(radians(angle2))*(radius);
+  	//var angle2 = angle2 + 180
+	px2 = (width-widthCamera)/2 + cos(radians(angle2))*(radius);
   	py2 = 75 + sin(radians(angle2))*(radius);
 
   	angle += frequency;
+  	angle2 += frequency2;
   	imageMode(CENTER);
 	image(espada,px+ widthCamera/2,py + heightCamera/2);
 	image(doble,px2+ widthCamera/2,py2 + heightCamera/2);
-	println(cos(radians(angle))*(radius));
 }
 
 function keyPressed() {

@@ -5,6 +5,12 @@ var colorBackground;
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	capture = createCapture(VIDEO);
+	createCapture({
+    audio: false,
+    video: {
+      facingMode: "user"
+    }
+  });
 	capture.size(320, 240);
 	capture.hide();
 	start = false;

@@ -148,5 +148,12 @@ function keyPressed() {
   		start = true;
   		startTime = millis();
 	}
+}
 
+
+function mousePressed() {
+	if (!start){
+  		start = true;
+  		startTime = millis();
+	}
 }
